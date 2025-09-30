@@ -1,4 +1,3 @@
-           
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
@@ -18,34 +17,48 @@
   <style>
   .w3-sidebar a {font-family: "Roboto", sans-serif}
   body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+  
+  /* 自定义滚动框样式 */
+  .scrollable-news {
+    max-height: 100px;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  
+  .scrollable-news ul {
+    padding-left: 20px;
+    margin: 0;
+  }
+  
+  .scrollable-news li {
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  
+  /* 自定义滚动条样式 */
+  .scrollable-news::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .scrollable-news::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+  
+  .scrollable-news::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+  
+  .scrollable-news::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
   </style>
 
   <link rel="icon" type="image/png" href="images/icons.png">
-  <!--
-  <script src="jquery.min.js"></script>
-  <script>
-  $(document).ready(function(){
-    // Add smooth scrolling to all links
-    $("a").on('click', function(event) {
-      // Make sure this.hash has a value before overriding default behavior
-      if (this.hash !== "") {
-        // Prevent default anchor click behavior
-        event.preventDefault();
-        // Store hash
-        var hash = this.hash;
-        // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-        $('html, body').animate({
-          scrollTop: $(hash).offset().top
-        }, 800, function(){
-          // Add hash (#) to URL when done scrolling (default click behavior)
-          window.location.hash = hash;
-        });
-      } // End if
-    });
-  });
-  </script>
-  //-->
 
 </head>
 
@@ -89,7 +102,7 @@
       <img style="width:220px; height:220px; border-radius:50%; " alt="profile photo" src="images/sherry1.jpg">
       <h1>Shaofeng Zhang (张少锋)</h1>
         <p class="w3-justify" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:600px">
-          I will join the <a href="https://saids.ustc.edu.cn/main.htm">School of Artificial Intelligence and Data Science at the University of Science and Technology of China (USTC)</a> as a tenure-track assistant professor.  
+          I will join the <a href="https://saids.ustc.edu.cn/main.htm">School of Artificial Intelligence and Data Science</a> at the University of Science and Technology of China (USTC) as a tenure-track assistant professor.  
   I received my Ph.D. from Shanghai Jiao Tong University, where I was advised by Professor <a href="https://thinklab.sjtu.edu.cn/">Junchi Yan</a> and Hongyuan Zha.  
   Prior to my doctoral studies, I earned my bachelor's degree from the University of Electronic Science and Technology of China (UESTC) in 2021.  
   My research focuses on self-supervised representation learning, diffusion models, and vision-language-action (VLA) modeling.  
@@ -99,8 +112,7 @@
         </p>    
         <p class="w3-center">
           <a href="mailto:ssfzhang@foxmail.com">Email</a> &nbsp/&nbsp
-          <a href="https://scholar.google.com/citations?user=VoVVJIgAAAAJ">Google Scholar</a> &nbsp/&nbsp
-          <a href="https://dblp.org/pid/132/2540.html"> DBLP </a>
+          <a href="https://scholar.google.com/citations?user=VoVVJIgAAAAJ">Google Scholar</a>
         </p>
         </tbody></table>
   </div>
@@ -108,175 +120,95 @@
 <!-- The News Section -->
   <div class="w3-container w3-light-grey w3-padding-8" id="news">
    <h2>News</h2>
-      <p><li> 09/2025, Three papers accepted to NeurIPS 2025. </li></p>
-      <p><li> 06/2025, One paper accepted to TPAMI 2025. </li></p>
-      <p><li> 06/2025, Two papers accepted to ICCV 2025. </li></p>
-      <p><li> 03/2025, One paper accepted to CVPR 2025. </li></p>
-      <p><li> 01/2025, One paper accepted to ICLR 2025. </li></p>
-<!--       <p><li> 09/2024, One paper accepted to NeurIPS 2024. </li></p> -->
-<!--       <p><li> 01/2024, One paper accepted to ICLR 2024. </li></p> -->
-<!--       <p><li> 04/2023, One paper accepted to ICML 2023. </li></p> -->
-<!--       <p><li> 01/2023, Two papers accepted to <a href="https://openreview.net/group?id=ICLR.cc/2023/Conference">ICLR 2023</a>. </li></p> -->
-<!--       <p><li> 07/2022, One paper accepted to <a href="https://eccv2022.ecva.net/">ECCV 2022</a>. </li></p> -->
-<!--       <p><li> 05/2022, One paper accepted to <a href="https://kdd.org/kdd2022/" >SIGKDD 2022</a>. </li></p> -->
-<!--       <p><li> 03/2022, One paper accepted to <a href="https://cvpr2022.thecvf.com/">CVPR 2022</a>. </li></p> -->
-<!--       <p><li> 01/2022, One paper accepted to <a href="https://openreview.net/group?id=ICLR.cc/2022/Conference">ICLR 2022</a>. </li></p> -->
+   <div class="scrollable-news">
+      <ul>
+        <li> 09/2025, Three papers accepted to NeurIPS 2025. </li>
+        <li> 06/2025, One paper accepted to TPAMI 2025. </li>
+        <li> 06/2025, Two papers accepted to ICCV 2025. </li>
+        <li> 03/2025, One paper accepted to CVPR 2025. </li>
+        <li> 01/2025, One paper accepted to ICLR 2025. </li>
+        <li> 09/2024, One paper accepted to NeurIPS 2024. </li>
+        <li> 01/2024, One paper accepted to ICLR 2024. </li>
+        <li> 04/2023, One paper accepted to ICML 2023. </li>
+        <li> 01/2023, Two papers accepted to ICLR 2023 </li>
+        <li> 07/2022, One paper accepted to ECCV 2022. </li>
+        <li> 05/2022, One paper accepted to SIGKDD 2022. </li>
+        <li> 03/2022, One paper accepted to CVPR 2022. </li>
+        <li> 01/2022, One paper accepted to ICLR 2022. </li>
+      </ul>
+   </div>
   </div>
-  
  <!-- The Publications Section -->
   <div class="w3-container w3-padding-32" id="publications">
     <h2>Research</h2>
-    <h4> First-author & Co-first author paper</h4>
+    <h4> Papers († indicates corresponding author.)</h4>
     <ol>
 
       <p>
-      <li><strong>EasyOutPainter: One Step Image Outpainting with Both Continuous Multiple and Resolution</strong>
-      <br>
-      <strong>Shaofeng Zhang</strong>, Qiang Zhou, Zhibin Wang, Hao Li, Junchi Yan
-      <br>
-      <em>TPAMI</em> 2025 | <a style="color: #447ec9" href="https://ieeexplore.ieee.org/document/11073175">Paper</a> | <a style="color: #447ec9" href="https://github.com/Sherrylone/EasyOutPainter">Code</a>
-      </p>
+          <li><strong>Less is More: Data Ablation for Reinforcement Fine-Tuning of Large Language Models</strong>
+          <br>
+          Haoru Tan, Xiuzhe Wu, Sitong Wu, <strong>Shaofeng Zhang</strong>, Yanfeng Chen, Xingwu Sun, Jeanne Shen, Xiaojuan Qi
+          <br>
+          <em>NeurIPS</em> 2025
+          </p>
+
+      <p>
+          <li><strong>VideoREPA: Learning Physics for Video Generation through Relational Alignment with Foundation Models</strong>
+          <br>
+          Xiangdong Zhang, Jiaqi Liao, <strong>Shaofeng Zhang</strong>, Fanqing Meng, Xiangpeng Wan, Junchi Yan, Yu Cheng 
+          <br>
+          <em>NeurIPS</em> 2025
+          </p>
+
+      <p>
+          <li><strong>DLoFT: Gradient-Decoupled Fine-Tuning for Generalizable Long Chain-of-Thought Reasoning</strong>
+          <br>
+          Sitong Wu, Haoru Tan, Jingyao Li, <strong>Shaofeng Zhang</strong>, Xiaojuan Qi, Bei Yu, Jiaya Jia 
+          <br>
+          <em>NeurIPS</em> 2025
+          </p>
+
+      <p>
+          <li><strong>EasyOutPainter: One Step Image Outpainting with Both Continuous Multiple and Resolution</strong>
+          <br>
+          <strong>Shaofeng Zhang</strong>, Qiang Zhou, Zhibin Wang, Hao Li, Junchi Yan
+          <br>
+          <em>TPAMI</em> 2025
+          </p>
                
       <p>
-      <li><strong>Towards More Diverse and Challenging Pre-training for Point Cloud Learning: Self-Supervised Cross Reconstruction with Decoupled Views</strong>
-      <br>
-      Xiangdong Zhang*, <strong>Shaofeng Zhang*</strong>, Junchi Yan
-      <br>
-      <em>ICCV</em> 2025 (* equal contribution) | <a style="color: #447ec9" href="#">Paper</a> | <a style="color: #447ec9" href="#">Code</a>
-      </p>
-
-      <p>
-      <li><strong>CR2PQ: Continuous Relative Rotary Positional Query for Dense Visual Representation Learning</strong>
-      <br>
-      <strong>Shaofeng Zhang</strong>, Qiang Zhou, Sitong Wu, Haoru Tan, Zhibin Wang, Jinfa Huang, Junchi Yan
-      <br>
-      <em>ICLR</em> 2025 | <a style="color: #447ec9" href="https://openreview.net/pdf?id=3l6PwssLNY">Paper</a> | <a style="color: #447ec9" href="#">Code</a>
-      </p>
-
-      <p>
-      <li><strong>PCP-MAE: Learning to Predict Centers for Point Masked Autoencoders</strong>
-      <br>
-      Xiangdong Zhang*, <strong>Shaofeng Zhang*</strong>, Junchi Yan
-      <br>
-      <em>NeurIPS</em> 2024 <strong>Spotlight</strong> (* equal contribution) | <a style="color: #447ec9" href="https://www.arxiv.org/pdf/2408.08753">Paper</a> | <a style="color: #447ec9" href="https://github.com/aHapBean/PCP-MAE">Code</a>
-      </p>
-
-      <p>
-      <li><strong>Continuous-Multiple Image Outpainting in One-Step via Positional Query and A Diffusion-based Approach</strong>
-      <br>
-      <strong>Shaofeng Zhang</strong>, Jinfa Huang, Qiang Zhou, Zhibin Wang, Fan Wang, Jiebo Luo, Junchi Yan
-      <br>
-      <em>ICLR</em> 2024 | <a style="color: #447ec9" href="https://openreview.net/pdf?id=7hxoYxKDTV">Paper</a> | <a style="color: #447ec9" href="https://github.com/Sherrylone/PQDiff">Code</a>
-      </p>
-      
-      <p>
-      <li><strong>Patch-level Contrastive Learning via Positional Query for Visual Pre-training</strong>
-      <br>
-      <strong>Shaofeng Zhang</strong>, Qiang Zhou, Zhibin Wang, Fan Wang, Junchi Yan
-      <br>
-      <em>ICML</em> 2023 | <a style="color: #447ec9" href="https://sherrylone.github.io/assets/ICML23_PQCL.pdf">Paper</a> | <a style="color: #447ec9" href="https://github.com/Sherrylone/Query_Contrastive">Code</a>
-      </p>
-      
-      <p>
-      <li><strong>Patch-Level Contrasting without Patch Correspondence for Accurate and Dense Contrastive Representation Learning</strong>
-      <br>
-      <strong>Shaofeng Zhang</strong>, Feng Zhu, Rui Zhao, Junchi Yan 
-      <br>
-      <em>ICLR</em> 2023 | <a style="color: #447ec9" href="https://openreview.net/pdf?id=10R_bcjFwJ">Paper</a>  | <a style="color: #447ec9" href="https://github.com/Sherrylone/Query_Contrastive">Code</a>
-      </p>
-
-      <p>
-      <li><strong>Contextual Image Masking Modeling via Synergized Contrasting without View Augmentation for Faster and Better Visual Pretraining</strong>
-      <br>
-      <strong>Shaofeng Zhang</strong>, Feng Zhu, Rui Zhao, Junchi Yan 
-      <br>
-      <em>ICLR</em> 2023 | <a style="color: #447ec9" href="https://openreview.net/pdf?id=A3sgyt4HWp">Paper</a> | <a style="color: #447ec9" href="https://github.com/Sherrylone/ccMIM">Code</a>
-      </p>
-
-      <p>
-      <li><strong>Self-supervised Learning of Visual Graph Matching</strong>
-      <br>
-      Chang Liu*, <strong>Shaofeng Zhang*</strong>, Junchi Yan, Xiaokang Yang
-      <br>
-      <em>ECCV</em> 2022 (* equal contribution) | <a style="color: #447ec9" href="https://sherrylone.github.io/assets/ECCV22_SCGM.pdf">Paper</a> | <a style="color: #447ec9" href="https://github.com/Sherrylone/SCGM">Code</a>
-      </p>
-
-      <p>
-      <li><strong>M-Mix: Generating Hard Negatives via Multi-sample Mixing for Contrastive Learning</strong>
-      <br>
-      <strong>Shaofeng Zhang</strong>, Meng Liu, Junchi Yan, Hengrui Zhang, Lingxiao Huang, Pinyan Lu, Xiaokang Yang
-      <br>
-      <em>KDD</em> 2022 <strong>Oral</strong> | <a style="color: #447ec9" href="https://sherrylone.github.io/assets/KDD22_M-Mix.pdf">Paper</a> | <a style="color: #447ec9" href="https://github.com/Sherrylone/M-Mix">Code</a>
-      </p>
-
-      <p>
-      <li><strong>Align Representations with Base: A New Approach to Self-Supervised Learning</strong>
-      <br>
-      <strong>Shaofeng Zhang</strong>, Lyn Qiu, Feng Zhu, Junchi Yan, Hengrui Zhang, Rui Zhao, Hongyang Li, Xiaokang Yang
-      <br>
-      <em>CVPR</em> 2022 | <a style="color: #447ec9" href="https://sherrylone.github.io/assets/CVPR22_ARB.pdf">Paper</a> | <a style="color: #447ec9" href="https://github.com/Sherrylone/Align-Representation-with-Base">Code</a>
-      </p>
-
-      <p>
-      <li><strong>Zero-CL: Instance and Feature decorrelation for negative-free symmetric contrastive learning</strong>
-      <br>
-      <strong>Shaofeng Zhang</strong>, Feng Zhu, Junchi Yan, Rui Zhao, Xiaokang Yang
-      <br>
-      <em>ICLR</em> 2022 | <a style="color: #447ec9" href="https://openreview.net/pdf?id=RAW9tCdVxLj">Paper</a> | <a style="color: #447ec9" href="https://github.com/Sherrylone/Zero-CL">Code</a>
-      </p>
-
-      <p>
-      <li><strong>The Diversified Ensemble Neural Network</strong>
-      <br>
-      <strong>Shaofeng Zhang</strong>, Meng Liu, Junchi Yan
-      <br>
-      <em>NeurIPS</em> 2020 | <a style="color: #447ec9" href="https://papers.nips.cc/paper/2020/file/b86e8d03fe992d1b0e19656875ee557c-Paper.pdf">Paper</a>
-      </p>
-
-      <p>
-      <li><strong>Fooled by Imagination: Adversarial Attack to Image Captioning Via Perturbation in Complex Domain</strong>
-      <br>
-      <strong>Shaofeng Zhang*</strong>, Zheng Wang*, Xing Xu, Xiang Guan, Yang Yang
-      <br>
-      <em>ICME</em> 2020 <strong>Oral</strong> (* equal contribution) | <a style="color: #447ec9" href="https://sherrylone.github.io/assets/ICME20_Fooled.pdf">Paper</a>
-      </p>
-      </ol>
-
-      <h4> Co-authored paper:</h4>
-      <ol>
-          <p>
-          <li><strong>HAP: Structure-Aware Masked Image Modeling for Human-Centric Perception</strong>
+          <li><strong>Towards More Diverse and Challenging Pre-training for Point Cloud Learning: Self-Supervised Cross Reconstruction with Decoupled Views</strong>
           <br>
-          Junkun Yuan, Xinyu Zhang, Hao Zhou, Jian Wang, Zhongwei Qiu, Zhiyin Shao, <strong>Shaofeng Zhang</strong>, Sifan Long, Kun Kuang, Kun Yao, Junyu Han, Errui Ding, Lanfen Lin, Fei Wu, Jingdong Wang
+          Xiangdong Zhang*, <strong>Shaofeng Zhang*</strong>, Junchi Yan
           <br>
-          <em>NeurIPS</em> 2023
+          <em>ICCV</em> 2025 (* equal contribution)
           </p>
 
-          <p>
-          <li><strong>Localized contrastive learning on graphs</strong>
+      <p>
+          <li><strong>Point2RBox-v2: Rethinking Point-supervised Oriented Object Detection with Spatial Layout Among Instances</strong>
           <br>
-          Hengrui Zhang, Qitian Wu, Yu Wang, <strong>Shaofeng Zhang</strong>, Junchi Yan, Philip S Yu
+          Yi Yu, Botao Ren, Peiyuan Zhang, Mingxin Liu, Junwei Luo, <strong>Shaofeng Zhang</strong>, Feipeng Da, Junchi Yan, Xue Yang
           <br>
-          arXiv:2212.04604 
+          <em>CVPR</em> 2025
           </p>
 
-          <p>
-          <li><strong>Revo-lion: Evaluating and refining vision-language instruction tuning datasets</strong>
+      <p>
+          <li><strong>CR2PQ: Continuous Relative Rotary Positional Query for Dense Visual Representation Learning</strong>
           <br>
-          Ning Liao, <strong>Shaofeng Zhang</strong>, Renqiu Xia, Bo Zhang, Min Cao, Yu Qiao, Junchi Yan
+          <strong>Shaofeng Zhang</strong>, Qiang Zhou, Sitong Wu, Haoru Tan, Zhibin Wang, Jinfa Huang, Junchi Yan
           <br>
-          arXiv:2310.06594
-          </p>
-           
-          <p>
-          <li><strong>Regionblip: A unified multi-modal pre-training framework for holistic and regional comprehension</strong>
-          <br>
-          Qiang Zhou, Chaohui Yu, <strong>Shaofeng Zhang</strong>, Sitong Wu, Zhibing Wang, Fan Wang
-          <br>
-          arXiv:2308.02299
+          <em>ICLR</em> 2025
           </p>
 
-          <p>
+      <p>
+          <li><strong>PCP-MAE: Learning to Predict Centers for Point Masked Autoencoders</strong>
+          <br>
+          Xiangdong Zhang*, <strong>Shaofeng Zhang*</strong>, Junchi Yan
+          <br>
+          <em>NeurIPS</em> 2024 <strong>Spotlight</strong> (* equal contribution)
+          </p>
+
+      <p>
           <li><strong>ChronoMagic-Bench: A Benchmark for Metamorphic Evaluation of Text-to-Time-lapse Video Generation</strong>
           <br>
           Shenghai Yuan, Jinfa Huang, Yongqi Xu, Yaoyang Liu, <strong>Shaofeng Zhang</strong>, Yujun Shi, Ruijie Zhu, Xinhua Cheng, Jiebo Luo, Li Yuan
@@ -284,43 +216,127 @@
           <em>NeurIPS</em> 2024 D&B Track <strong>Spotlight</strong>
           </p>
 
-           <p>
+      <p>
+          <li><strong>Continuous-Multiple Image Outpainting in One-Step via Positional Query and A Diffusion-based Approach</strong>
+          <br>
+          <strong>Shaofeng Zhang</strong>, Jinfa Huang, Qiang Zhou, Zhibin Wang, Fan Wang, Jiebo Luo, Junchi Yan
+          <br>
+          <em>ICLR</em> 2024
+          </p>
+
+      <p>
+          <li><strong>HAP: Structure-Aware Masked Image Modeling for Human-Centric Perception</strong>
+          <br>
+          Junkun Yuan, Xinyu Zhang, Hao Zhou, Jian Wang, Zhongwei Qiu, Zhiyin Shao, <strong>Shaofeng Zhang</strong>, Sifan Long, Kun Kuang, Kun Yao, Junyu Han, Errui Ding, Lanfen Lin, Fei Wu, Jingdong Wang
+          <br>
+          <em>NeurIPS</em> 2023
+          </p>
+      
+      <p>
+          <li><strong>Patch-level Contrastive Learning via Positional Query for Visual Pre-training</strong>
+          <br>
+          <strong>Shaofeng Zhang</strong>, Qiang Zhou, Zhibin Wang, Fan Wang, Junchi Yan
+          <br>
+          <em>ICML</em> 2023
+          </p>
+      
+      <p>
+          <li><strong>Patch-Level Contrasting without Patch Correspondence for Accurate and Dense Contrastive Representation Learning</strong>
+          <br>
+          <strong>Shaofeng Zhang</strong>, Feng Zhu, Rui Zhao, Junchi Yan 
+          <br>
+          <em>ICLR</em> 2023
+          </p>
+
+      <p>
+          <li><strong>Contextual Image Masking Modeling via Synergized Contrasting without View Augmentation for Faster and Better Visual Pretraining</strong>
+          <br>
+          <strong>Shaofeng Zhang</strong>, Feng Zhu, Rui Zhao, Junchi Yan 
+          <br>
+          <em>ICLR</em> 2023
+          </p>
+
+      <p>
+          <li><strong>Self-supervised Learning of Visual Graph Matching</strong>
+          <br>
+          Chang Liu*, <strong>Shaofeng Zhang*</strong>, Junchi Yan, Xiaokang Yang
+          <br>
+          <em>ECCV</em> 2022 (* equal contribution)
+          </p>
+
+      <p>
+          <li><strong>M-Mix: Generating Hard Negatives via Multi-sample Mixing for Contrastive Learning</strong>
+          <br>
+          <strong>Shaofeng Zhang</strong>, Meng Liu, Junchi Yan, Hengrui Zhang, Lingxiao Huang, Pinyan Lu, Xiaokang Yang
+          <br>
+          <em>KDD</em> 2022 <strong>Oral</strong>
+          </p>
+
+      <!-- <p>
+          <li><strong>Localized contrastive learning on graphs</strong>
+          <br>
+          Hengrui Zhang, Qitian Wu, Yu Wang, <strong>Shaofeng Zhang</strong>, Junchi Yan, Philip S Yu
+          <br>
+          Preprint
+          </p> -->
+
+      <p>
+          <li><strong>Align Representations with Base: A New Approach to Self-Supervised Learning</strong>
+          <br>
+          <strong>Shaofeng Zhang</strong>, Lyn Qiu, Feng Zhu, Junchi Yan, Hengrui Zhang, Rui Zhao, Hongyang Li, Xiaokang Yang
+          <br>
+          <em>CVPR</em> 2022
+          </p>
+
+      <p>
+          <li><strong>Zero-CL: Instance and Feature decorrelation for negative-free symmetric contrastive learning</strong>
+          <br>
+          <strong>Shaofeng Zhang</strong>, Feng Zhu, Junchi Yan, Rui Zhao, Xiaokang Yang
+          <br>
+          <em>ICLR</em> 2022
+
+      <p>
+          <li><strong>The Diversified Ensemble Neural Network</strong>
+          <br>
+          <strong>Shaofeng Zhang</strong>, Meng Liu, Junchi Yan
+          <br>
+          <em>NeurIPS</em> 2020
+          </p>
+
+      <p>
+          <li><strong>Fooled by Imagination: Adversarial Attack to Image Captioning Via Perturbation in Complex Domain</strong>
+          <br>
+          <strong>Shaofeng Zhang*</strong>, Zheng Wang*, Xing Xu, Xiang Guan, Yang Yang
+          <br>
+          <em>ICME</em> 2020 <strong>Oral</strong> (* equal contribution)
+          </p>
+          
+      <!-- <p>
+          <li><strong>Revo-lion: Evaluating and refining vision-language instruction tuning datasets</strong>
+          <br>
+          Ning Liao, <strong>Shaofeng Zhang</strong>, Renqiu Xia, Bo Zhang, Min Cao, Yu Qiao, Junchi Yan
+          <br>
+          Preprint
+          </p> -->
+           
+      <!-- <p>
+          <li><strong>Regionblip: A unified multi-modal pre-training framework for holistic and regional comprehension</strong>
+          <br>
+          Qiang Zhou, Chaohui Yu, <strong>Shaofeng Zhang</strong>, Sitong Wu, Zhibing Wang, Fan Wang
+          <br>
+          Preprint
+          </p> -->
+
+      <!-- <p>
           <li><strong>Motion Control for Enhanced Complex Action Video Generation</strong>
           <br>
           Qiang Zhou, <strong>Shaofeng Zhang</strong>, Nianzu Yang, Ye Qian, Hao Li
           <br>
-          arXiv:2411.08328
-          </p>
-           
+          Preprint
+          </p> -->
+
       </ol>
              
-  </div>
-
-  <div class="w3-container w3-light-grey w3-padding-8" id="work">
-    <h2>Working Experience</h2>
-    <p>
-    <li>Research intern at <a href="https://www.sensetime.com/?lang=en-us">Sensetime Research</a>. (Jul. 2021 to Oct. 2022) <br />
-      Explore the representation learning and general self-supervised learning.
-    </li>
-    </p>
-
-    <p>
-    <li>Research intern at <a href="https://www.tencent.com/zh-cn/about.html" target=_blank>Tencent</a>. (Feb. 2021 to May. 2021) <br />
-      Worked on improving the generalization ability of unsupervised classification and detection.
-    </li>
-    </p>
-
-    <p>
-    <li>Research intern at <a href="https://app.mokahr.com/campus-recruitment/smartmore/40506#/" target=_blank>SmartMore</a>. (Jul. 2020 to Sep. 2020) <br />
-          Worked on general represetantion learning.
-    </li>
-    </p>
-
-    <p>
-    <li>Research intern at <a href="https://www.msra.cn/"> Microsoft Research</a>. (Jan. 2020 to Jul. 2020) <br />
-      Contributed to the AI education <a href="https://microsoft.github.io/ai-edu/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/A6-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%B3%BB%E7%BB%9F/">book</a>, <a href="https://github.com/microsoft/ai-edu">github project</a> and <a href="https://www.bilibili.com/video/BV1Ut4y1Q7Fe/?spm_id_from=333.337.search-card.all.click">video</a>.
-    </li>
-    </p>
   </div>
 
  <div class="w3-container w3-padding-8" id="service">
