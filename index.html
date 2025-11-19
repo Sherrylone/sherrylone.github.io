@@ -2,389 +2,371 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
 <head>
-
-  <title>Shaofeng Zhang's Homepage</title>
-
+  <title>Shaofeng Zhang | USTC</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="description" content="Shaofeng Zhang is currently a tenure-track associate professor at USTC">
-  <meta name="keywords" content="Shaofeng Zhang, 张少锋, Computer, Vision">
+  <meta name="keywords" content="Shaofeng Zhang, 张少锋, Computer Vision, USTC">
   <meta name="author" content="Shaofeng Zhang" />
 
-  <link rel="stylesheet" href="w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
   <style>
-  .w3-sidebar a {font-family: "Roboto", sans-serif}
-  body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
-  
-  /* 自定义滚动框样式 */
-.scrollable-news {
-  max-height: 190px;
-  overflow-y: auto;
-  padding: 15px;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  margin-top: 10px;
-}
+    /* --- Global Variables & Reset --- */
+    :root {
+      --primary-color: #2c3e50; /* Deep Navy */
+      --accent-color: #0056b3; /* Academic Blue */
+      --bg-color: #f8f9fa; /* Soft Gray Background */
+      --text-color: #333;
+      --card-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
 
-.scrollable-news ul {
-  padding-left: 20px;
-  margin: 0;
-}
+    body, h1, h2, h3, h4, h5, h6 { font-family: "Montserrat", sans-serif; color: var(--text-color); }
+    body { background-color: var(--bg-color); line-height: 1.6; }
+    p, li, a { font-family: "Roboto", sans-serif; font-size: 16px; }
+    
+    a { text-decoration: none; color: var(--accent-color); transition: color 0.2s; }
+    a:hover { color: #003d82; text-decoration: underline; }
 
-.scrollable-news li {
-  margin-bottom: 12px;
-  line-height: 1.5;
-  color: #333;
-  padding: 4px 0;
-  border-bottom: 1px solid #f5f5f5;
-}
+    /* --- Sidebar --- */
+    .w3-sidebar {
+      background-color: var(--primary-color) !important;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    }
+    .w3-sidebar a { color: #ecf0f1 !important; }
+    .w3-sidebar a:hover { background-color: rgba(255,255,255,0.1) !important; color: #fff !important; }
+    
+    /* --- Main Content Area --- */
+    .content-wrapper {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: white;
+      box-shadow: var(--card-shadow);
+      min-height: 100vh;
+      padding-bottom: 40px;
+    }
 
-.scrollable-news li:last-child {
-  border-bottom: none;
-}
+    /* --- Profile Section --- */
+    .profile-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+      padding: 40px 20px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .profile-img-container {
+      flex: 0 0 220px;
+      text-align: center;
+    }
+    
+    .profile-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
 
-.scrollable-news li:hover {
-  background-color: #f8f9fa;
-  border-radius: 4px;
-  padding-left: 8px;
-  transition: all 0.2s ease;
-}
+    .profile-text {
+      flex: 1;
+    }
 
-/* 自定义滚动条样式 */
-.scrollable-news::-webkit-scrollbar {
-  width: 6px;
-}
+    .profile-name {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--primary-color);
+    }
 
-.scrollable-news::-webkit-scrollbar-track {
-  background: #f8f9fa;
-  border-radius: 3px;
-}
+    .social-links {
+      margin-top: 15px;
+    }
+    .social-links a {
+      margin-right: 20px;
+      font-weight: 500;
+    }
+    .recruit-notice {
+      background-color: #fff3cd;
+      color: #856404;
+      padding: 10px 15px;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      margin-top: 15px;
+      border-left: 4px solid #ffeeba;
+    }
 
-.scrollable-news::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
-  border-radius: 3px;
-}
+    /* --- News Section --- */
+    .news-box {
+      max-height: 250px; /* Slightly taller */
+      overflow-y: auto;
+      padding: 10px 20px;
+      border: 1px solid #e9ecef;
+      border-radius: 8px;
+      background-color: #fff;
+    }
+    .news-box ul { padding-left: 20px; list-style-type: disc; }
+    .news-box li { margin-bottom: 10px; color: #555; font-size: 0.95rem; }
+    .news-box li:hover { color: #000; }
 
-.scrollable-news::-webkit-scrollbar-thumb:hover {
-  background: #a8a8a8;
-}
+    /* Custom Scrollbar */
+    .news-box::-webkit-scrollbar { width: 6px; }
+    .news-box::-webkit-scrollbar-thumb { background-color: #ccc; border-radius: 3px; }
 
-/* 为Firefox定制滚动条 */
-.scrollable-news {
-  scrollbar-width: thin;
-  scrollbar-color: #c1c1c1 #f8f9fa;
-}
+    /* --- Publications --- */
+    .pub-list li {
+      margin-bottom: 20px;
+      padding-left: 5px;
+    }
+    .pub-title {
+      font-weight: 600;
+      font-size: 1.05rem;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .pub-venue {
+      font-style: italic;
+      color: var(--primary-color);
+      font-weight: 500;
+    }
+    .highlight-author {
+      font-weight: bold;
+      color: #000;
+      border-bottom: 2px solid #e0e0e0;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .profile-container { flex-direction: column; text-align: center; }
+      .profile-text { text-align: left; }
+      .w3-main { margin-left: 0 !important; }
+    }
   </style>
-
+  
   <link rel="icon" type="image/png" href="images/icons.png">
-
 </head>
 
+<body class="w3-light-grey">
 
-<body class="w3-content" style="max-width:1000px">
-
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-collapse w3-top w3-right" style="z-index:3;width:150px" id="mySidebar">
-  <div class="w3-container w3-display-container w3-padding-16">
-    <h3><b>SHAOFENG</b></h3>
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-top" style="z-index:3;width:200px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16 w3-center">
+    <h3 style="color:white; letter-spacing: 2px;"><b>SHAOFENG</b></h3>
   </div>
-  <div class="w3-padding-64 w3-text-light-grey w3-large" style="font-weight:bold">
-    <a href="#home" class="w3-bar-item w3-button">Home</a>
-    <a href="#news" class="w3-bar-item w3-button">News</a>
-    <!-- <a href="#projects" class="w3-bar-item w3-button">Projects</a> -->
-    <!-- <a href="#talks" class="w3-bar-item w3-button">Talks</a> -->
-    <a href="#publications" class="w3-bar-item w3-button">Research</a>
-    <a href="#service" class="w3-bar-item w3-button">Services</a>
+  <div class="w3-padding-64 w3-large" style="font-weight:500">
+    <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-home w3-margin-right"></i>Home</a>
+    <a href="#news" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-newspaper w3-margin-right"></i>News</a>
+    <a href="#publications" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-book w3-margin-right"></i>Research</a>
+    <a href="#service" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-users w3-margin-right"></i>Services</a>
   </div>
 </nav>
 
-<!-- Top menu on small screens -->
 <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
   <div class="w3-bar-item w3-padding-24">SHAOFENG</div>
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right"  style="font-stretch: extra-expanded;" onclick="w3_open()"><b>≡</b></a>
-  </div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()">
+    <i class="fa fa-bars"></i>
+  </a>
 </header>
 
-<!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:150px">
+<div class="w3-main" style="margin-left:200px">
+  
+  <div class="content-wrapper">
 
-  <!-- Push down content on small screens -->
-  <div class="w3-hide-large" style="margin-top:83px"></div>
+    <div class="w3-hide-large" style="margin-top:83px"></div>
 
-<!-- The Home Section -->
-    <div class="w3-container w3-center w3-padding-32" id="home">
-      <img style="width:220px; height:220px; border-radius:50%; " alt="profile photo" src="images/sherry1.jpg">
-      <h1>Shaofeng Zhang (张少锋)</h1>
-        <p class="w3-justify" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:600px">
-          I am a tenure-track assistant professor (预聘副教授) at the <a href="https://saids.ustc.edu.cn/main.htm">School of Artificial Intelligence and Data Science (SAIDS)</a> at the University of Science and Technology of China (USTC).  
-  I received my Ph.D. from Shanghai Jiao Tong University (SJTU), where I was advised by Professor <a href="https://thinklab.sjtu.edu.cn/">Junchi Yan</a> and Hongyuan Zha.  
-  Prior to my doctoral studies, I earned my bachelor's degree from the UESTC in 2021.
-        </p>
-        <p class="w3-justify" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:600px"> 
-        My research focuses on self-supervised representation learning, diffusion models, point cloud understanding, and vision-language-action (VLA) modeling.  
-        </p>
-        <p style="color: red;">
-          I am actively recruiting highly motivated Master's and Ph.D. students, as well as outstanding undergraduates. If you are interested in collaborating, please feel free to contact me via email.
-        </p>    
-        <p class="w3-center">
-          <a href="mailto:sfzhang@ustc.edu.cn">Email</a> &nbsp/&nbsp
-          <a href="https://scholar.google.com/citations?user=VoVVJIgAAAAJ">Google Scholar</a>
-        </p>
-        </tbody></table>
-  </div>
-
-<!-- The News Section -->
-  <div class="w3-container w3-padding-8" id="news">
-   <h2>News</h2>
-   <div class="scrollable-news">
-      <ul>
-        <li> 09/2025, Three papers accepted to NeurIPS 2025. </li>
-        <li> 06/2025, One paper accepted to TPAMI 2025. </li>
-        <li> 06/2025, Two papers accepted to ICCV 2025. </li>
-        <li> 03/2025, One paper accepted to CVPR 2025. </li>
-        <li> 01/2025, One paper accepted to ICLR 2025. </li>
-        <li> 09/2024, One paper accepted to NeurIPS 2024. </li>
-        <li> 01/2024, One paper accepted to ICLR 2024. </li>
-        <li> 04/2023, One paper accepted to ICML 2023. </li>
-        <li> 01/2023, Two papers accepted to ICLR 2023 </li>
-        <li> 07/2022, One paper accepted to ECCV 2022. </li>
-        <li> 05/2022, One paper accepted to SIGKDD 2022. </li>
-        <li> 03/2022, One paper accepted to CVPR 2022. </li>
-        <li> 01/2022, One paper accepted to ICLR 2022. </li>
-        <li> 09/2020, One paper accepted to NeurIPS 2020. </li>
-      </ul>
-   </div>
-  </div>
- <!-- The Publications Section -->
-  <div class="w3-container w3-padding-32" id="publications">
-    <h2>Research</h2>
-    <h4> Publications († indicates corresponding author.)</h4>
-    <ol>
-
-      <p>
-          <li><strong>Less is More: Data Ablation for Reinforcement Fine-Tuning of Large Language Models</strong>
-          <br>
-          Haoru Tan, Xiuzhe Wu, Sitong Wu, <strong>Shaofeng Zhang</strong>, Yanfeng Chen, Xingwu Sun, Jeanne Shen, Xiaojuan Qi
-          <br>
-          <em>NeurIPS</em> 2025
+    <div id="home">
+      <div class="profile-container">
+        <div class="profile-img-container">
+          <img src="images/sherry1.jpg" alt="Shaofeng Zhang" class="profile-img">
+        </div>
+        <div class="profile-text">
+          <div class="profile-name">Shaofeng Zhang (张少锋)</div>
+          <p>
+            I am a tenure-track assistant professor (预聘副教授) at the <a href="https://saids.ustc.edu.cn/main.htm">School of Artificial Intelligence and Data Science (SAIDS)</a>, University of Science and Technology of China (USTC).
           </p>
-
-      <p>
-          <li><strong>VideoREPA: Learning Physics for Video Generation through Relational Alignment with Foundation Models</strong>
-          <br>
-          Xiangdong Zhang, Jiaqi Liao, <strong>Shaofeng Zhang</strong>, Fanqing Meng, Xiangpeng Wan, Junchi Yan, Yu Cheng 
-          <br>
-          <em>NeurIPS</em> 2025
+          <p>
+            I received my Ph.D. from Shanghai Jiao Tong University (SJTU), advised by Prof. <a href="https://thinklab.sjtu.edu.cn/">Junchi Yan</a> and Hongyuan Zha. Prior to that, I earned my bachelor's degree from UESTC in 2021.
           </p>
-
-      <p>
-          <li><strong>DLoFT: Gradient-Decoupled Fine-Tuning for Generalizable Long Chain-of-Thought Reasoning</strong>
-          <br>
-          Sitong Wu, Haoru Tan, Jingyao Li, <strong>Shaofeng Zhang</strong>, Xiaojuan Qi, Bei Yu, Jiaya Jia 
-          <br>
-          <em>NeurIPS</em> 2025
-          </p>
-
-      <p>
-          <li><strong>EasyOutPainter: One Step Image Outpainting with Both Continuous Multiple and Resolution</strong>
-          <br>
-          <strong>Shaofeng Zhang</strong>, Qiang Zhou, Zhibin Wang, Hao Li, Junchi Yan
-          <br>
-          <em>TPAMI</em> 2025
-          </p>
-
-      <p>
-          <li><strong>Mixture-of-Scores: Robust Image-Text Data Valuation via Three Lines of Code</strong>
-          <br>
-          Sitong Wu, Haoru Tan, Yukang Chen, <strong>Shaofeng Zhang</strong>, Jingyao Li, Bei Yu, Xiaojuan Qi, Jiaya Jia
-          <br>
-          <em>ICCV</em> 2025
-          </p>
-               
-      <p>
-          <li><strong>Towards More Diverse and Challenging Pre-training for Point Cloud Learning: Self-Supervised Cross Reconstruction with Decoupled Views</strong>
-          <br>
-          Xiangdong Zhang*, <strong>Shaofeng Zhang*</strong>, Junchi Yan
-          <br>
-          <em>ICCV</em> 2025 (* equal contribution)
-          </p>
-
-      <p>
-          <li><strong>Point2RBox-v2: Rethinking Point-supervised Oriented Object Detection with Spatial Layout Among Instances</strong>
-          <br>
-          Yi Yu, Botao Ren, Peiyuan Zhang, Mingxin Liu, Junwei Luo, <strong>Shaofeng Zhang</strong>, Feipeng Da, Junchi Yan, Xue Yang
-          <br>
-          <em>CVPR</em> 2025
-          </p>
-
-      <p>
-          <li><strong>CR2PQ: Continuous Relative Rotary Positional Query for Dense Visual Representation Learning</strong>
-          <br>
-          <strong>Shaofeng Zhang</strong>, Qiang Zhou, Sitong Wu, Haoru Tan, Zhibin Wang, Jinfa Huang, Junchi Yan
-          <br>
-          <em>ICLR</em> 2025
-          </p>
-
-      <p>
-          <li><strong>PCP-MAE: Learning to Predict Centers for Point Masked Autoencoders</strong>
-          <br>
-          Xiangdong Zhang*, <strong>Shaofeng Zhang*</strong>, Junchi Yan
-          <br>
-          <em>NeurIPS</em> 2024 <strong>Spotlight</strong> (* equal contribution)
-          </p>
-
-      <p>
-          <li><strong>ChronoMagic-Bench: A Benchmark for Metamorphic Evaluation of Text-to-Time-lapse Video Generation</strong>
-          <br>
-          Shenghai Yuan, Jinfa Huang, Yongqi Xu, Yaoyang Liu, <strong>Shaofeng Zhang</strong>, Yujun Shi, Ruijie Zhu, Xinhua Cheng, Jiebo Luo, Li Yuan
-          <br>
-          <em>NeurIPS</em> 2024 D&B Track <strong>Spotlight</strong>
-          </p>
-
-      <p>
-          <li><strong>Continuous-Multiple Image Outpainting in One-Step via Positional Query and A Diffusion-based Approach</strong>
-          <br>
-          <strong>Shaofeng Zhang</strong>, Jinfa Huang, Qiang Zhou, Zhibin Wang, Fan Wang, Jiebo Luo, Junchi Yan
-          <br>
-          <em>ICLR</em> 2024
-          </p>
-
-      <p>
-          <li><strong>HAP: Structure-Aware Masked Image Modeling for Human-Centric Perception</strong>
-          <br>
-          Junkun Yuan, Xinyu Zhang, Hao Zhou, Jian Wang, Zhongwei Qiu, Zhiyin Shao, <strong>Shaofeng Zhang</strong>, Sifan Long, Kun Kuang, Kun Yao, Junyu Han, Errui Ding, Lanfen Lin, Fei Wu, Jingdong Wang
-          <br>
-          <em>NeurIPS</em> 2023
-          </p>
-      
-      <p>
-          <li><strong>Patch-level Contrastive Learning via Positional Query for Visual Pre-training</strong>
-          <br>
-          <strong>Shaofeng Zhang</strong>, Qiang Zhou, Zhibin Wang, Fan Wang, Junchi Yan
-          <br>
-          <em>ICML</em> 2023
-          </p>
-      
-      <p>
-          <li><strong>Patch-Level Contrasting without Patch Correspondence for Accurate and Dense Contrastive Representation Learning</strong>
-          <br>
-          <strong>Shaofeng Zhang</strong>, Feng Zhu, Rui Zhao, Junchi Yan 
-          <br>
-          <em>ICLR</em> 2023
-          </p>
-
-      <p>
-          <li><strong>Contextual Image Masking Modeling via Synergized Contrasting without View Augmentation for Faster and Better Visual Pretraining</strong>
-          <br>
-          <strong>Shaofeng Zhang</strong>, Feng Zhu, Rui Zhao, Junchi Yan 
-          <br>
-          <em>ICLR</em> 2023
-          </p>
-
-      <p>
-          <li><strong>Self-supervised Learning of Visual Graph Matching</strong>
-          <br>
-          Chang Liu*, <strong>Shaofeng Zhang*</strong>, Junchi Yan, Xiaokang Yang
-          <br>
-          <em>ECCV</em> 2022 (* equal contribution)
-          </p>
-
-      <p>
-          <li><strong>M-Mix: Generating Hard Negatives via Multi-sample Mixing for Contrastive Learning</strong>
-          <br>
-          <strong>Shaofeng Zhang</strong>, Meng Liu, Junchi Yan, Hengrui Zhang, Lingxiao Huang, Pinyan Lu, Xiaokang Yang
-          <br>
-          <em>KDD</em> 2022 <strong>Oral</strong>
-          </p>
-
-      <p>
-          <li><strong>Align Representations with Base: A New Approach to Self-Supervised Learning</strong>
-          <br>
-          <strong>Shaofeng Zhang</strong>, Lyn Qiu, Feng Zhu, Junchi Yan, Hengrui Zhang, Rui Zhao, Hongyang Li, Xiaokang Yang
-          <br>
-          <em>CVPR</em> 2022
-          </p>
-
-      <p>
-          <li><strong>Zero-CL: Instance and Feature decorrelation for negative-free symmetric contrastive learning</strong>
-          <br>
-          <strong>Shaofeng Zhang</strong>, Feng Zhu, Junchi Yan, Rui Zhao, Xiaokang Yang
-          <br>
-          <em>ICLR</em> 2022
-
-      <p>
-          <li><strong>The Diversified Ensemble Neural Network</strong>
-          <br>
-          <strong>Shaofeng Zhang</strong>, Meng Liu, Junchi Yan
-          <br>
-          <em>NeurIPS</em> 2020
-          </p>
-
-    </ol>
-
-    <!-- <ol>
-    <h4> Preprints </h4>
-
-      <p>
-          <li><strong>Localized contrastive learning on graphs</strong>
-          <br>
-          Hengrui Zhang, Qitian Wu, Yu Wang, <strong>Shaofeng Zhang</strong>, Junchi Yan, Philip S Yu
-          <br>
+          <p>
+            <strong>Research Interests:</strong> Self-supervised representation learning, Diffusion models, Point cloud understanding, and World model.
           </p>
           
-      <p>
-          <li><strong>Revo-lion: Evaluating and refining vision-language instruction tuning datasets</strong>
-          <br>
-          Ning Liao, <strong>Shaofeng Zhang</strong>, Renqiu Xia, Bo Zhang, Min Cao, Yu Qiao, Junchi Yan
-          <br>
-          </p>
-           
-      <p>
-          <li><strong>Regionblip: A unified multi-modal pre-training framework for holistic and regional comprehension</strong>
-          <br>
-          Qiang Zhou, Chaohui Yu, <strong>Shaofeng Zhang</strong>, Sitong Wu, Zhibing Wang, Fan Wang
-          <br>
-          </p>
+          <div class="recruit-notice">
+            <i class="fa fa-bullhorn"></i> <strong>Recruiting:</strong> I am actively recruiting highly motivated Master's and Ph.D. students, as well as outstanding undergraduates. Please email me if interested.
+          </div>
 
-      <p>
-          <li><strong>Motion Control for Enhanced Complex Action Video Generation</strong>
-          <br>
-          Qiang Zhou, <strong>Shaofeng Zhang</strong>, Nianzu Yang, Ye Qian, Hao Li
-          <br>
-          </p>
+          <div class="social-links">
+            <a href="mailto:sfzhang@ustc.edu.cn"><i class="fa fa-envelope"></i> Email</a>
+            <a href="https://scholar.google.com/citations?user=VoVVJIgAAAAJ"><i class="fa fa-graduation-cap"></i> Google Scholar</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-      </ol> -->
-             
-  </div>
+    <div class="w3-container w3-padding-32" id="news">
+      <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">News</h2>
+      <div class="news-box">
+        <ul>
+          <li><strong>09/2025:</strong> Three papers accepted to <b>NeurIPS 2025</b>.</li>
+          <li><strong>06/2025:</strong> One paper accepted to <b>TPAMI 2025</b>.</li>
+          <li><strong>06/2025:</strong> Two papers accepted to <b>ICCV 2025</b>.</li>
+          <li><strong>03/2025:</strong> One paper accepted to <b>CVPR 2025</b>.</li>
+          <li><strong>01/2025:</strong> One paper accepted to <b>ICLR 2025</b>.</li>
+          <li><strong>09/2024:</strong> One paper accepted to NeurIPS 2024.</li>
+          <li><strong>01/2024:</strong> One paper accepted to ICLR 2024.</li>
+          <li><strong>04/2023:</strong> One paper accepted to ICML 2023.</li>
+          <li><strong>01/2023:</strong> Two papers accepted to ICLR 2023.</li>
+          <li><strong>07/2022:</strong> One paper accepted to ECCV 2022.</li>
+          <li><strong>05/2022:</strong> One paper accepted to SIGKDD 2022.</li>
+          <li><strong>03/2022:</strong> One paper accepted to CVPR 2022.</li>
+          <li><strong>01/2022:</strong> One paper accepted to ICLR 2022.</li>
+          <li><strong>09/2020:</strong> One paper accepted to NeurIPS 2020.</li>
+        </ul>
+      </div>
+    </div>
 
- <div class="w3-container w3-padding-8" id="service">
-    <h2>Services</h2>
-      <p> PC member/Reviewer: TPAMI, CVPR, ECCV, ICCV, NeurIPS, ICLR, ICML, AAAI.</p>
-  </div>
-</div>
+    <div class="w3-container w3-padding-32" id="publications">
+      <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Research</h2>
+      <h4>Publications <small style="color:grey; font-weight:400; font-size: 14px;">(† indicates corresponding author, * indicates equal contribution)</small></h4>
+      
+      <ol class="pub-list">
+        <li>
+          <span class="pub-title">Less is More: Data Ablation for Reinforcement Fine-Tuning of Large Language Models</span>
+          Haoru Tan, Xiuzhe Wu, Sitong Wu, <span class="highlight-author">Shaofeng Zhang</span>, Yanfeng Chen, Xingwu Sun, Jeanne Shen, Xiaojuan Qi
+          <br><span class="pub-venue">NeurIPS 2025</span>
+        </li>
 
-<script>
-// Accordion 
-function myAccFunc() {
-  var x = document.getElementById("demoAcc");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else {
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
+        <li>
+          <span class="pub-title">VideoREPA: Learning Physics for Video Generation through Relational Alignment with Foundation Models</span>
+          Xiangdong Zhang, Jiaqi Liao, <span class="highlight-author">Shaofeng Zhang</span>, Fanqing Meng, Xiangpeng Wan, Junchi Yan, Yu Cheng
+          <br><span class="pub-venue">NeurIPS 2025</span>
+        </li>
 
-// Click on the "Jeans" link on page load to open the accordion for demo purposes
-document.getElementById("myBtn").click();
+        <li>
+          <span class="pub-title">DLoFT: Gradient-Decoupled Fine-Tuning for Generalizable Long Chain-of-Thought Reasoning</span>
+          Sitong Wu, Haoru Tan, Jingyao Li, <span class="highlight-author">Shaofeng Zhang</span>, Xiaojuan Qi, Bei Yu, Jiaya Jia
+          <br><span class="pub-venue">NeurIPS 2025</span>
+        </li>
 
+        <li>
+          <span class="pub-title">EasyOutPainter: One Step Image Outpainting with Both Continuous Multiple and Resolution</span>
+          <span class="highlight-author">Shaofeng Zhang</span>, Qiang Zhou, Zhibin Wang, Hao Li, Junchi Yan
+          <br><span class="pub-venue">IEEE TPAMI 2025</span>
+        </li>
 
+        <li>
+          <span class="pub-title">Mixture-of-Scores: Robust Image-Text Data Valuation via Three Lines of Code</span>
+          Sitong Wu, Haoru Tan, Yukang Chen, <span class="highlight-author">Shaofeng Zhang</span>, Jingyao Li, Bei Yu, Xiaojuan Qi, Jiaya Jia
+          <br><span class="pub-venue">ICCV 2025</span>
+        </li>
+
+        <li>
+          <span class="pub-title">Towards More Diverse and Challenging Pre-training for Point Cloud Learning: Self-Supervised Cross Reconstruction with Decoupled Views</span>
+          Xiangdong Zhang*, <span class="highlight-author">Shaofeng Zhang*</span>, Junchi Yan
+          <br><span class="pub-venue">ICCV 2025</span>
+        </li>
+
+        <li>
+          <span class="pub-title">Point2RBox-v2: Rethinking Point-supervised Oriented Object Detection with Spatial Layout Among Instances</span>
+          Yi Yu, Botao Ren, Peiyuan Zhang, Mingxin Liu, Junwei Luo, <span class="highlight-author">Shaofeng Zhang</span>, Feipeng Da, Junchi Yan, Xue Yang
+          <br><span class="pub-venue">CVPR 2025</span>
+        </li>
+
+        <li>
+          <span class="pub-title">CR2PQ: Continuous Relative Rotary Positional Query for Dense Visual Representation Learning</span>
+          <span class="highlight-author">Shaofeng Zhang</span>, Qiang Zhou, Sitong Wu, Haoru Tan, Zhibin Wang, Jinfa Huang, Junchi Yan
+          <br><span class="pub-venue">ICLR 2025</span>
+        </li>
+
+        <li>
+          <span class="pub-title">PCP-MAE: Learning to Predict Centers for Point Masked Autoencoders</span>
+          Xiangdong Zhang*, <span class="highlight-author">Shaofeng Zhang*</span>, Junchi Yan
+          <br><span class="pub-venue">NeurIPS 2024 (Spotlight)</span>
+        </li>
+
+        <li>
+          <span class="pub-title">ChronoMagic-Bench: A Benchmark for Metamorphic Evaluation of Text-to-Time-lapse Video Generation</span>
+          Shenghai Yuan, Jinfa Huang, Yongqi Xu, Yaoyang Liu, <span class="highlight-author">Shaofeng Zhang</span>, Yujun Shi, Ruijie Zhu, Xinhua Cheng, Jiebo Luo, Li Yuan
+          <br><span class="pub-venue">NeurIPS 2024 D&B Track (Spotlight)</span>
+        </li>
+
+        <li>
+          <span class="pub-title">Continuous-Multiple Image Outpainting in One-Step via Positional Query and A Diffusion-based Approach</span>
+          <span class="highlight-author">Shaofeng Zhang</span>, Jinfa Huang, Qiang Zhou, Zhibin Wang, Fan Wang, Jiebo Luo, Junchi Yan
+          <br><span class="pub-venue">ICLR 2024</span>
+        </li>
+
+        <li>
+          <span class="pub-title">HAP: Structure-Aware Masked Image Modeling for Human-Centric Perception</span>
+          Junkun Yuan, Xinyu Zhang, Hao Zhou, Jian Wang, Zhongwei Qiu, Zhiyin Shao, <span class="highlight-author">Shaofeng Zhang</span>, et al.
+          <br><span class="pub-venue">NeurIPS 2023</span>
+        </li>
+
+        <li>
+          <span class="pub-title">Patch-level Contrastive Learning via Positional Query for Visual Pre-training</span>
+          <span class="highlight-author">Shaofeng Zhang</span>, Qiang Zhou, Zhibin Wang, Fan Wang, Junchi Yan
+          <br><span class="pub-venue">ICML 2023</span>
+        </li>
+
+        <li>
+          <span class="pub-title">Patch-Level Contrasting without Patch Correspondence for Accurate and Dense Contrastive Representation Learning</span>
+          <span class="highlight-author">Shaofeng Zhang</span>, Feng Zhu, Rui Zhao, Junchi Yan
+          <br><span class="pub-venue">ICLR 2023</span>
+        </li>
+
+        <li>
+          <span class="pub-title">Contextual Image Masking Modeling via Synergized Contrasting without View Augmentation</span>
+          <span class="highlight-author">Shaofeng Zhang</span>, Feng Zhu, Rui Zhao, Junchi Yan
+          <br><span class="pub-venue">ICLR 2023</span>
+        </li>
+
+        <li>
+          <span class="pub-title">Self-supervised Learning of Visual Graph Matching</span>
+          Chang Liu*, <span class="highlight-author">Shaofeng Zhang*</span>, Junchi Yan, Xiaokang Yang
+          <br><span class="pub-venue">ECCV 2022</span>
+        </li>
+
+        <li>
+          <span class="pub-title">M-Mix: Generating Hard Negatives via Multi-sample Mixing for Contrastive Learning</span>
+          <span class="highlight-author">Shaofeng Zhang</span>, Meng Liu, Junchi Yan, Hengrui Zhang, Lingxiao Huang, Pinyan Lu, Xiaokang Yang
+          <br><span class="pub-venue">KDD 2022 (Oral)</span>
+        </li>
+
+        <li>
+          <span class="pub-title">Align Representations with Base: A New Approach to Self-Supervised Learning</span>
+          <span class="highlight-author">Shaofeng Zhang</span>, Lyn Qiu, Feng Zhu, Junchi Yan, Hengrui Zhang, Rui Zhao, Hongyang Li, Xiaokang Yang
+          <br><span class="pub-venue">CVPR 2022</span>
+        </li>
+
+        <li>
+          <span class="pub-title">Zero-CL: Instance and Feature decorrelation for negative-free symmetric contrastive learning</span>
+          <span class="highlight-author">Shaofeng Zhang</span>, Feng Zhu, Junchi Yan, Rui Zhao, Xiaokang Yang
+          <br><span class="pub-venue">ICLR 2022</span>
+        </li>
+
+        <li>
+          <span class="pub-title">The Diversified Ensemble Neural Network</span>
+          <span class="highlight-author">Shaofeng Zhang</span>, Meng Liu, Junchi Yan
+          <br><span class="pub-venue">NeurIPS 2020</span>
+        </li>
+      </ol>
+    </div>
+
+    <div class="w3-container w3-padding-32" id="service">
+      <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Services</h2>
+      <p class="w3-margin-top">
+        <i class="fa fa-check w3-text-green w3-margin-right"></i>
+        <strong>PC Member / Reviewer:</strong> TPAMI, CVPR, ECCV, ICCV, NeurIPS, ICLR, ICML, AAAI.
+      </p>
+    </div>
+    
+  </div> </div> <script>
 // Open and close sidebar
 function w3_open() {
   document.getElementById("mySidebar").style.display = "block";
